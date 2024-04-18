@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Interactive Map</title>
+  <title>Interactive Map of Sexual Health Clinics</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
     #container {
       display: flex;
-      height: 80vh; /* Adjust the height as needed */
+      height: 80vh;
     }
-    #places {
+    #clinics {
       width: 50%;
-      overflow-y: auto; /* Allows scrolling if the list is long */
+      overflow-y: auto;
       padding: 10px;
       box-sizing: border-box;
     }
     #map {
       width: 50%;
-      height: 80vh; /* Keep the height the same as the container */
+      height: 80vh;
+    }
+    #clinics ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    #clinics li {
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
   <div id="container">
-    <div id="places">
-      <!-- List of places will go here -->
+    <div id="clinics">
       <h3>Sexual Health Clinics</h3>
       <ul>
-        <li>56 Dean Street, London - Sexual Health Clinic</li>
-        <li>Mortimer Market Centre, including the Margaret Pyke Centre</li>
-        <li>Burrell Street Sexual Health Clinic</li>
-        <li>John Hunter Clinic for Sexual Health</li>
-        <li>The Archway Sexual Health Clinic</li>
-        <!-- Add more list items here -->
+        <li>
+          <strong>56 Dean Street</strong><br>
+          Phone: 020 3315 5656<br>
+          <a href="https://www.dean.st/" target="_blank">Website</a>
+        </li>
+        <li>
+          <strong>Mortimer Market Centre</strong><br>
+          Phone: 020 3317 5100<br>
+          <a href="https://www.mortimermarket.nhs.uk/" target="_blank">Website</a>
+        </li>
+        <li>
+          <strong>Burrell Street Sexual Health Clinic</strong><br>
+          Phone: 020 7188 6666<br>
+          <a href="https://www.burrellstreet.co.uk/" target="_blank">Website</a>
+        </li>
+        <li>
+          <strong>John Hunter Clinic for Sexual Health</strong><br>
+          Phone: 020 3315 1010<br>
+          <a href="https://www.chelwest.nhs.uk/services/hiv-sexual-health/clinics/john-hunter-clinic" target="_blank">Website</a>
+        </li>
+        <li>
+          <strong>The Archway Sexual Health Clinic</strong><br>
+          Phone: 020 7683 4103<br>
+          <a href="https://www.whittington.nhs.uk/default.asp?c=28069" target="_blank">Website</a>
+        </li>
+        <!-- Add more clinics here as needed -->
       </ul>
     </div>
     <div id="map"></div>
