@@ -4,15 +4,35 @@
   <title>Interactive Map</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
+    #container {
+      display: flex;
+      height: 80vh; /* Adjust the height as needed */
+    }
+    #places {
+      width: 50%;
+      overflow-y: auto; /* Allows scrolling if the list is long */
+      padding: 10px;
+      box-sizing: border-box;
+    }
     #map {
-      height: 400px;
-      width: 100%;
+      width: 50%;
+      height: 80vh; /* Keep the height the same as the container */
     }
   </style>
 </head>
 <body>
-  <div id="map"></div>
-  <script src="map.js"></script>
+  <div id="container">
+    <div id="places">
+      <!-- List of places will go here -->
+      <h3>Places</h3>
+      <ul>
+        <li>56 Dean Street, London - Sexual Health Clinic</li>
+        <!-- Add more list items here -->
+      </ul>
+    </div>
+    <div id="map"></div>
+  </div>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="map.js"></script>
 </body>
 </html>
