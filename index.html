@@ -4,26 +4,55 @@
   <title>Interactive Map of Sexual Health Clinics</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <style>
+    body {
+      font-family: Arial, sans-serif; /* Sets a clean, modern font */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* Centers the container horizontally */
+      align-items: center; /* Centers the container vertically */
+      height: 100vh; /* Full viewport height */
+      background: #f4f4f4; /* Light grey background */
+    }
     #container {
       display: flex;
-      height: 80vh;
+      width: 70%; /* Reduced overall width */
+      height: 50vh; /* Reduced overall height */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+      border: 1px solid #ccc; /* Border around the entire container */
+      background: #fff; /* White background for the content area */
+      overflow: hidden; /* Ensures no internal content spills over */
     }
     #clinics {
       width: 50%;
       overflow-y: auto;
       padding: 10px;
-      box-sizing: border-box;
+      border-right: 1px solid #ccc; /* Adds a separator between the list and the map */
     }
-    #map {
-      width: 50%;
-      height: 80vh;
+    #clinics h3 {
+      margin-top: 0;
+      color: #333; /* Dark grey color for headings */
+      font-size: 18px; /* Slightly larger font for the heading */
     }
     #clinics ul {
       list-style-type: none;
       padding: 0;
+      margin: 0;
     }
     #clinics li {
-      margin-bottom: 20px;
+      margin-bottom: 10px; /* Reduced space between list items */
+      font-size: 14px; /* Slightly smaller font size for compact appearance */
+    }
+    #clinics a {
+      color: #0066cc; /* A nice blue color for links */
+      text-decoration: none; /* Removes underline from links */
+    }
+    #clinics a:hover, #clinics a:focus {
+      text-decoration: underline; /* Adds underline on hover/focus for accessibility */
+    }
+    #map {
+      width: 50%;
+      height: 100%; /* Ensures the map takes the full height of the container */
     }
   </style>
 </head>
